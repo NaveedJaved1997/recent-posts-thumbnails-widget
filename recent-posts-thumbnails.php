@@ -60,6 +60,15 @@ class RPT_Widget extends WP_Widget {
                                     <?php the_post_thumbnail( 'thumbnail', array( 'style' => 'width: 50px; height: 50px; object-fit: cover;' ) ); ?>
                                 </a>
                             </div>
+                        <?php else : ?>
+                            <div class="rpt-thumb" style="float: left; margin-right: 10px;">
+                                <a href="<?php the_permalink(); ?>">
+                                    <img src="https://placehold.co/600x400?text=Demo" 
+                                        width="50" height="50" 
+                                        style="border-radius: 4px; object-fit: cover;" 
+                                        alt="Demo Image">
+                                </a>
+                            </div>
                         <?php endif; ?>
                         
                         <div class="rpt-content">
